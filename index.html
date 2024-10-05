@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Facebook</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="profile">
+            <img src="https://th.bing.com/th/id/OIP.NUtszPzO0N2pqvpK4m1gRgHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+    <span id="username-home">Tuba Khan</span>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li onclick="showSection('home')">Home</li>
+                <li onclick="showSection('friends')">Friends</li>
+                <li onclick="showSection('messages')">Messages</li>
+                <li onclick="showSection('notifications')">Notifications</li>
+                <li onclick="showSection('settings')">Settings</li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div id="home" class="section">
+                <h2>Home</h2>
+                <p>Welcome to your homepage! Here you can see posts from your friends, updates, and more.</p>
+                <div class="post-box">
+                    <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+                    <button onclick="addPost()">Post</button>
+                </div>
+                <div id="posts"></div>
+            </div>
+
+            <div id="friends" class="section" style="display:none;">
+                <h2>Friends</h2>
+                <p>Here you can see your list of friends and friend suggestions.</p>
+                <ul class="friend-list">
+                    <li>John Doe</li>
+                    <li>Jane Smith</li>
+                    <li>Michael Johnson</li>
+                    <li>Naushad khan</li>
+                    <li>Zara</li>
+                    <li>Priya</li>
+                    <li>Saloni</li>
+                </ul>
+            </div>
+
+            <div id="messages" class="section" style="display:none;">
+                <h2>Messages</h2>
+                <p>Check your messages here.</p>
+                <div class="message-list">
+                    <div class="message">
+                        <strong>John:</strong> Hey! How are you?
+                    </div>
+                    <div class="message">
+                        <strong>Jane:</strong> Let’s catch up tomorrow.
+                    </div>
+                    <div class="message">
+                        <strong>Alvira:</strong>Hello, Tuba what's going on?
+                    </div>
+                </div>
+            </div>
+
+            <div id="notifications" class="section" style="display:none;">
+                <h2>Notifications</h2>
+                <p>You have 3+ new notifications.</p>
+                <ul class="notification-list">
+                    <li>John liked your post</li>
+                    <li>Jane commented on your picture</li>
+                    <li>Ali liked your reels</li>
+                    <li>Humza  liked your story</li>
+                    <li>You have new friend massage request from Valid</li>
+
+                </ul>
+            </div>
+
+            <div id="settings" class="section" style="display:none;">
+                <h2>Settings</h2>
+                <p>Update your profile and account settings here.</p>
+                <div class="settings-list">
+                    <div>Profile Edit</div>
+                    <div>Change Password</div>
+                    <div>Privacy Settings</div>
+                    <div>Notification Preferences</div>
+                    <div>Account Center</div>
+                    <div>Security</div>
+                    <div>Bloked contact</div>
+                    <div>Help</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
